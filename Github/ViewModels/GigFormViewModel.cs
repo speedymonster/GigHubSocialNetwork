@@ -13,12 +13,11 @@ namespace Github.ViewModels
         public string Time { get; set; }
         public byte Genre { get; set; } 
         public IEnumerable<Genre> Genres { get; set; }
-        public DateTime DateTime
+        public DateTime GetDateTime()
         {
-            get
-            {
+            
                 return DateTime.Parse(String.Format("{0} {1}", Date, Time));
-            }
+            
         }
     }
 }
