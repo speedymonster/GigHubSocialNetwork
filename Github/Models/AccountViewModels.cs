@@ -64,6 +64,12 @@ namespace Github.Models
 
     public class RegisterViewModel
     {
+
+        [Required]
+        [StringLength(100)]
+        [Display(Name = "Nombre")]
+        public string Name { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
